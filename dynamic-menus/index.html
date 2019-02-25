@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<style type="text/css">
+.mnu { display:none; width:195px; background-color:#fff; position:absolute; top:0px; left:0px; padding:0px; z-index:2; }
+.mnuitem { margin:2px 0px; background-color:#336699; background-image: url(/images/mnu-blu.gif); background-position: left top; background-repeat: no-repeat; border:solid 1px #ccccff; } /**/
+.mnuitem:hover { background-color:#99cccc; background-image: url(/images/mnu-blu-hov.gif); border:solid 1px #ccccff; }
+.mnuitem a { color:#fff; display:block; text-decoration:none; margin:0px; padding: 0px 20px 0px 10px; height:26px; font-size:11px; line-height:24px; font-family: Verdana, Helvetica, sans-serif;}
+.mnuitem a:hover { color:black; }
+.submenu a { background-image:url(/images/arrow-right.png); background-position:right center; background-repeat:no-repeat; } /*added dynamically by jquery if submenu exists*/
+</style>
+
+</head>
+<body>
+
+Hover over the links to pop-out menus.
+
+<div>
+    <a href="/viewbanned.aspx" class="parentmenu" data-menuid="BannedMenu">Banned</a>  
+    <a href="#" class="parentmenu" data-menuid="WmsMainMenu">WMS</a>  
+    <a href="#" class="parentmenu" data-menuid="ReportsMenu">Reports</a>  
+    <a href="#" class="parentmenu" data-menuid="ToolsMenu">Tools</a>  
+    <a href="#" class="parentmenu" data-menuid="MiscMenu">Misc</a>
+</div>
+<div id="WmsMainMenu" class="mnu">
+    <div class="mnuitem"><a href="/orderissues.aspx">Order Issues</a></div>
+    <div class="mnuitem"><a href="/orderstatuswms.aspx">Order Status Compare</a></div>
+    <div class="mnuitem"><a href="/productissues.aspx">Product Issues</a></div>
+    <div class="mnuitem"><a href="/inventoryissues.aspx">Inventory Issues</a></div>
+    <div class="mnuitem"><a href="/productstockcompare.aspx">Inventory Discrepancies</a></div>
+</div>
+
+<div id="BannedMenu" class="mnu">
+    <div class="mnuitem"><a href="/viewbanned.aspx">View Banned Data</a></div>
+    <div class="mnuitem"><a href="/viewbannedattempts.aspx">View Banned Attempts</a></div>
+    <div class="mnuitem"><a href="/addbanned.aspx">Add Banned User</a></div>
+</div>
+
+<div id="ReportsMenu" class="mnu">
+    <div class="mnuitem"><a href="/scheduledprops.aspx">Prop Report</a></div>
+</div>
+
+<div id="ToolsMenu" class="mnu">
+    <div class="mnuitem"><a href="/medusa/dashboard.aspx">Medusa</a></div>
+</div>
+
+<div id="MiscMenu" class="mnu">
+    <div class="mnuitem"><a href="/change_password.aspx">Change My Password</a></div>
+    <div class="mnuitem"><a href="/Customer%20Service%20Universal%20Manual.pdf" target="_blank">Customer Service Manual</a></div>
+</div>
+
+</body>
+</html>
