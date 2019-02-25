@@ -8,7 +8,6 @@
 	.mnuitem a { color:#fff; display:block; text-decoration:none; margin:0px; padding: 0px 20px 0px 10px; height:26px; font-size:11px; line-height:24px; font-family: Verdana, Helvetica, sans-serif;}
 	.mnuitem a:hover { color:black; }
 	.submenu a { background-image:url(/images/arrow-right.png); background-position:right center; background-repeat:no-repeat; } /*added dynamically by jquery if submenu exists*/
-	.parentmenu { margin:0px 10px; color:blue; }
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="dropdown-menu.js"></script>
@@ -17,40 +16,32 @@
 <body>
 
 Hover over the links to pop-out menus.
+	<div>
+		<a href="/viewbanned.aspx" class="parentmenu" data-menuid="BannedMenu">Products</a> |
+		<a href="#" class="parentmenu" data-menuid="WmsMainMenu">Orders</a> |
+		<a href="#" class="parentmenu" data-menuid="ToolsMenu">Tools</a>
+	</div>
+	<div id="WmsMainMenu" class="mnu">
+		<div class="mnuitem"><a href="#">Order Issues</a></div>
+		<div class="mnuitem" data-submenuid="InventoryMenu"><a href="#">Inventory</a></div>
+		<div class="mnuitem"><a href="#">Order Status Compare</a></div>
+	</div>
 
-<div>
-    <a href="/viewbanned.aspx" class="parentmenu" data-menuid="BannedMenu">Banned</a>  
-    <a href="#" class="parentmenu" data-menuid="WmsMainMenu">WMS</a>  
-    <a href="#" class="parentmenu" data-menuid="ReportsMenu">Reports</a>  
-    <a href="#" class="parentmenu" data-menuid="ToolsMenu">Tools</a>  
-    <a href="#" class="parentmenu" data-menuid="MiscMenu">Misc</a>
-</div>
-<div id="WmsMainMenu" class="mnu">
-    <div class="mnuitem"><a href="/orderissues.aspx">Order Issues</a></div>
-    <div class="mnuitem"><a href="/orderstatuswms.aspx">Order Status Compare</a></div>
-    <div class="mnuitem"><a href="/productissues.aspx">Product Issues</a></div>
-    <div class="mnuitem"><a href="/inventoryissues.aspx">Inventory Issues</a></div>
-    <div class="mnuitem"><a href="/productstockcompare.aspx">Inventory Discrepancies</a></div>
-</div>
+	<div id="BannedMenu" class="mnu">
+		<div class="mnuitem"><a href="#">Edit</a></div>
+		<div class="mnuitem"><a href="#">Add</a></div>
+		<div class="mnuitem"><a href="#">Inventory</a></div>
+	</div>
 
-<div id="BannedMenu" class="mnu">
-    <div class="mnuitem"><a href="/viewbanned.aspx">View Banned Data</a></div>
-    <div class="mnuitem"><a href="/viewbannedattempts.aspx">View Banned Attempts</a></div>
-    <div class="mnuitem"><a href="/addbanned.aspx">Add Banned User</a></div>
-</div>
+	<div id="ToolsMenu" class="mnu">
+		<div class="mnuitem"><a href="#">Change My Password</a></div>
+		<div class="mnuitem"><a href="#">Service Manual</a></div>
+	</div>
 
-<div id="ReportsMenu" class="mnu">
-    <div class="mnuitem"><a href="/scheduledprops.aspx">Prop Report</a></div>
-</div>
-
-<div id="ToolsMenu" class="mnu">
-    <div class="mnuitem"><a href="/medusa/dashboard.aspx">Medusa</a></div>
-</div>
-
-<div id="MiscMenu" class="mnu">
-    <div class="mnuitem"><a href="/change_password.aspx">Change My Password</a></div>
-    <div class="mnuitem"><a href="/Customer%20Service%20Universal%20Manual.pdf" target="_blank">Customer Service Manual</a></div>
-</div>
+	<div id="InventoryMenu" class="mnu">
+		<div class="mnuitem"><a href="#">Inventory Issues</a></div>
+		<div class="mnuitem"><a href="#">Add Inventory</a></div>
+	</div>
 
 </body>
 </html>
