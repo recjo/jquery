@@ -1,14 +1,17 @@
 <html>
 <head>
 
-<style type="text/css">
-.mnu { display:none; width:195px; background-color:#fff; position:absolute; top:0px; left:0px; padding:0px; z-index:2; }
-.mnuitem { margin:2px 0px; background-color:#336699; background-image: url(/images/mnu-blu.gif); background-position: left top; background-repeat: no-repeat; border:solid 1px #ccccff; } /**/
-.mnuitem:hover { background-color:#99cccc; background-image: url(/images/mnu-blu-hov.gif); border:solid 1px #ccccff; }
-.mnuitem a { color:#fff; display:block; text-decoration:none; margin:0px; padding: 0px 20px 0px 10px; height:26px; font-size:11px; line-height:24px; font-family: Verdana, Helvetica, sans-serif;}
-.mnuitem a:hover { color:black; }
-.submenu a { background-image:url(/images/arrow-right.png); background-position:right center; background-repeat:no-repeat; } /*added dynamically by jquery if submenu exists*/
-</style>
+	<style type="text/css">
+	.mnu { display:none; width:195px; background-color:#fff; position:absolute; top:0px; left:0px; padding:0px; z-index:2; }
+	.mnuitem { margin:2px 0px; background-color:#336699; background-image: url(/images/mnu-blu.gif); background-position: left top; background-repeat: no-repeat; border:solid 1px #ccccff; } /**/
+	.mnuitem:hover { background-color:#99cccc; background-image: url(/images/mnu-blu-hov.gif); border:solid 1px #ccccff; }
+	.mnuitem a { color:#fff; display:block; text-decoration:none; margin:0px; padding: 0px 20px 0px 10px; height:26px; font-size:11px; line-height:24px; font-family: Verdana, Helvetica, sans-serif;}
+	.mnuitem a:hover { color:black; }
+	.submenu a { background-image:url(/images/arrow-right.png); background-position:right center; background-repeat:no-repeat; } /*added dynamically by jquery if submenu exists*/
+	.parentmenu { margin:0px 10px; color:blue; }
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="dropdown-menu.js"></script>
 
 </head>
 <body>
